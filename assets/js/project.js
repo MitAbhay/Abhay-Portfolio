@@ -6,9 +6,25 @@ const projectcards = document.querySelector(".projectcards");
 // Array of object for projects
 const projects = [
   {
+    title: "ALLinOne",
+    cardImage: "assets/images/project-page/ALLinOne.png",
+    description:
+      "This as my personal blog website, where I post my blogs and articles.",
+    Previewlink: "",
+    Githublink: "https://github.com/MitAbhay/ALLinOne",
+  },
+  {
+    title: "My Portfolio",
+    cardImage: "assets/images/project-page/AbhayPortfolio.png",
+    description: "This is my Portfolio that are you visiting right now 😊.",
+    Previewlink: "",
+    Githublink: "https://github.com/MitAbhay/AbhayPortfolio",
+  },
+  {
     title: "CloudNotes",
-    cardImage: "assets/images/project-page/",
-    description: "This as an Web Applicationt to store your notes on cloud services and you can acess your notes from anywhere",
+    cardImage: "assets/images/project-page/CloudNotes.png",
+    description:
+      "This as an Web Applicationt to store your notes on cloud services and you can acess your notes from anywhere",
     Previewlink: "",
     Githublink: "https://github.com/MitAbhay/CLOUD-NOTES",
   },
@@ -27,31 +43,17 @@ const projects = [
     Githublink: "https://github.com/MitAbhay/TextPro",
   },
   {
-    title: "Tic-Tac-Toe Game",
-    cardImage: "assets/images/project-page/",
-    description: "An AI based Game ",
-    Previewlink: "",
-    Githublink: "https://github.com/MitAbhay/TextPro",
-  },
-  {
-    title: "Google Clone",
-    cardImage: "assets/images/project-page/",
-    description: "Clone of Google search Engine",
-    Previewlink: "",
-    Githublink: "",
-  },
-  {
-    title: "Game 1",
-    cardImage: "assets/images/project-page/",
-    description: "",
+    title: "Game X",
+    cardImage: "assets/images/project-page/ComingSoon.webp",
+    description: "Coming Soon , Working on",
     tagimg: "https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png",
     Previewlink: "",
     Githublink: "",
   },
   {
-    title: "Game 2",
-    cardImage: "assets/images/project-page/",
-    description: "",
+    title: "TechCrush",
+    cardImage: "assets/images/project-page/ComingSoon.webp",
+    description: "Coming Soon, Working on",
     Previewlink: "",
     Githublink: "",
   },
@@ -61,8 +63,8 @@ const projects = [
 const showCards = () => {
   let output = "";
   projects.forEach(
-    ({ title, cardImage, tags, Previewlink, Githublink }) => {
-      (output += `       
+    ({ title, cardImage, description, Previewlink, Githublink }) => {
+      output += `       
         <div class="column skill-card card" style="margin: 15px"data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600" >
           <div class="wrapper" style="background: url(${cardImage}) center / cover no-repeat;">
             <div class="header">
@@ -71,6 +73,7 @@ const showCards = () => {
               <div class="content">
               <div class="title-div">
                 <h1 class="title"><a href="#">${title}</a></h1>
+                <p>${description}</p>
                 </div>
             <ul class="menu-content"><br>
                   <li><a href="${Previewlink}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></a></li>
@@ -79,8 +82,7 @@ const showCards = () => {
               </div>
             </div>
           </div>
-        </div>`
-      )
+        </div>`;
     }
   );
   projectcards.innerHTML = output;
