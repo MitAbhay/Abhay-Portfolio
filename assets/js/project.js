@@ -6,6 +6,14 @@ const projectcards = document.querySelector(".projectcards");
 // Array of object for projects
 const projects = [
   {
+    title: "Cuddit",
+    cardImage: "assets/images/project-page/Cuddit.png",
+    description:
+      "Cuddit is a social news website and forum where content is socially curated and promoted by site members through voting.",
+    Previewlink: "",
+    Githublink: "https://github.com/MitAbhay/Cuddit",
+  },
+  {
     title: "ALLinOne",
     cardImage: "assets/images/project-page/ALLinOne.png",
     description:
@@ -19,6 +27,14 @@ const projects = [
     description: "This is my Portfolio that are you visiting right now 😊.",
     Previewlink: "",
     Githublink: "https://github.com/MitAbhay/AbhayPortfolio",
+  },
+  {
+    title: "NFT Ground",
+    cardImage: "assets/images/project-page/nft.png",
+    description:
+      "NFT Ground : Place where you can find collection of different NFT's and can Mint very easily.",
+    Previewlink: "",
+    Githublink: "https://github.com/MitAbhay/NFT-Ground",
   },
   {
     title: "CloudNotes",
@@ -41,22 +57,7 @@ const projects = [
     description: "Text Changing Website",
     Previewlink: "",
     Githublink: "https://github.com/MitAbhay/TextPro",
-  },
-  {
-    title: "Game X",
-    cardImage: "assets/images/project-page/ComingSoon.webp",
-    description: "Coming Soon , Working on",
-    tagimg: "https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png",
-    Previewlink: "",
-    Githublink: "",
-  },
-  {
-    title: "TechCrush",
-    cardImage: "assets/images/project-page/ComingSoon.webp",
-    description: "Coming Soon, Working on",
-    Previewlink: "",
-    Githublink: "",
-  },
+  }
 ];
 
 // function for rendering project cards data
